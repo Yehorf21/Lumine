@@ -1,5 +1,7 @@
 import { footerIconLinks } from '../../helpers/context';
 
+// /* eslint-disable */
+
 export const Footer = () => {
   return (
     <div className="footer">
@@ -17,8 +19,9 @@ export const Footer = () => {
             <a
               key={i}
               href={'https://' + iconLink}
-              className={`footer__icon footer__icon--${i + 1}`}
-            />
+            >
+              <div className={`footer__icon footer__icon--${i + 1}`} />
+            </a>
           ))}
         </div>
 
