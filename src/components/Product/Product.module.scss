@@ -1,0 +1,149 @@
+.product {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+
+  @include underscore($metal);
+
+  @include on-tablet {
+    gap: 50px;
+  }
+
+  &__image {
+    --padding-image: 20px;
+
+    // we subtract the inline padding of the body element
+    height: calc(100vw - (var(--padding-image) * 2));
+    width: calc(100vw - (var(--padding-image) * 2));
+
+    background-image: url(../../../public/images/product.jpg);
+    @include imageDefault;
+    border-radius: 50%;
+
+    align-self: center;
+
+    @include on-tablet {
+      --padding-image: 34px;
+      height: 70vw;
+      width: 70vw;
+    }
+
+    @include on-desktop {
+      height: 50vw;
+      width: 50vw;
+
+      max-height: 750px;
+      max-width: 750px;
+    }
+  }
+
+  &__description {
+    @include cancelPadding;
+    // for better look on huge screens
+    max-width: 1440px;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    height: 250px;
+    width: 100vw;
+
+    background-color: $charcoal;
+
+    &::after {
+      --padding-underscore: 40px;
+
+      content: "";
+
+      position: absolute;
+      bottom: 35px;
+
+      height: 2px;
+      width: calc(100vw - (var(--padding-underscore) * 2));
+
+      background-image: linear-gradient(to right, $rich-black 0%, $champagne 33%, $metal 99%);
+
+      @include on-tablet {
+        --padding-underscore: 120px;
+      }
+
+      @include on-desktop {
+        max-width: 750px;
+      }
+    }
+
+    @include on-tablet {
+      padding: 65px 100px;
+      height: 280px;
+    }
+
+    @include on-desktop {
+      padding: 22px 107px 70px;
+
+      height: 400px;
+
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+
+      justify-content: unset;
+    }
+  }
+
+  &__titles {
+    display: none;
+
+    @include on-desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 30vw;
+    }
+  }
+
+  &__title {
+    @include textType(32px, auto, $main-font, 700);
+
+    background-clip: text;
+    background-image: linear-gradient(to right, $rich-black 0%, $champagne 10%);
+    color: transparent;
+  }
+
+  &__paragraph {
+    @include textType(16px, 24px, $secondary-font, 300);
+    color: $champagne;
+
+    @include on-tablet {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @media (min-width: 760px) {
+      font-size: 24px;
+      line-height: 32px;
+
+      max-width: 750px;
+    }
+  }
+}
+
+@keyframes showUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@supports (animation-timeline: view()) {
+  .product {
+    &__image {
+      opacity: .3;
+      transform: translateY(50%);
+  
+      animation: showUp linear forwards;
+      animation-timeline: view();
+      animation-range-end: 50vw;
+    }
+  }
+}

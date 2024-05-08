@@ -1,0 +1,154 @@
+.why-us {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+
+  align-items: center;
+
+  @include underscore($khaki);
+
+  @include on-desktop {
+    gap: 120px;
+  }
+
+  &__title {
+    margin: 0;
+
+    @include textType(80px, auto, $main-font, 700);
+    color: $metal;
+
+    @include on-tablet {
+      font-size: 128px;
+    }
+  }
+
+  &__cards {
+    @include cancelPadding;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.why-us-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  max-width: 1440px;
+
+  @include on-desktop {
+    gap: 100px;
+    
+    flex-direction: row;
+  }
+
+  &__description {
+    padding: 50px 20px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 50px;
+    width: 100vw;
+
+    background-color: $champagne;
+
+    @include on-desktop {
+      height: fit-content;
+      width: 50vw;
+      max-width: 720px;
+    }
+
+    &--2 {
+      background-color: $charcoal;
+
+      @include on-desktop {
+        order: 5;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 400px;
+
+    margin: 0;
+    text-align: center;
+
+    @include textType(40px, auto, $main-font, 700);
+    color: $metal;
+
+    @include on-tablet {
+      max-width: 530px;
+      font-size: 64px;
+    }
+
+    &--2 {
+      background-clip: text;
+      background-image: linear-gradient(to right, $rich-black 0%, $champagne 10%);
+      color: transparent;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+
+    @include textType(16px, 20px, $secondary-font, 300);
+    color: $charcoal;
+
+    @include on-tablet {
+      max-width: 650px;
+
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &--2 {
+      color: $champagne;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+
+    height: 35vw;
+    width: 35vw;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    background-image: url(../../../public/images/why-us--first.jpg);
+    @include imageDefault;
+    border-radius: 54px;
+
+    &--2 {
+      background-image: url(../../../public/images/why-us--second.jpg);
+      margin-left: 120px;
+    }
+  }
+}
+
+@keyframes scaleUp {
+  to { transform: scale(1); }
+}
+
+@supports (animation-timeline: view()) {
+  .why-us-card {
+    &__image {
+      transform: scale(0.7);
+  
+      animation: scaleUp linear forwards;
+      animation-timeline: view();
+      animation-range-end: 50vw;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// helpers
+@import './utils/mixins';
+@import './utils/variables';
+
+//base
+@import './index.scss';
+
+//components
+
+@import './components/NavBar/NavBar.module';
+@import './components/Menu/Menu.module';
+@import './components/Header/Header.module';
+@import './components/Product/Product.module';
+@import './components/Why-us/Why-us.module';
+@import './components/Reviews/Reviews.module';
+@import './components/Contact-us/Contact-us.module';
+@import './components/Footer/Footer.module';
+
+html {
+  scroll-behavior: smooth;
+  margin-inline: auto;
+  max-width: 1440px;
+}
+
+body {
+  margin: 0 0 35px;
+  @include addPadding;
+}
+
+section {
+  margin-bottom: 120px;
+
+  @include on-tablet {
+    margin-bottom: 140px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 170px;
+  }
+}

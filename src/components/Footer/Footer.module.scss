@@ -1,0 +1,110 @@
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-bottom: 80px;
+
+  @include on-desktop {
+    justify-content: space-between;
+  }
+
+  &__left-group, &__right-group {
+    display: none;
+
+    @include on-desktop {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      max-width: 160px;
+      word-wrap: break-word;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    
+    @include textType(32px, auto, $main-font, 700);
+    color: $rich-black;
+    
+    &--2 {
+      text-align: right;
+    }
+  }
+
+  &__link {
+    margin: 0;
+
+    @include textType(24px, 32px, $secondary-font, 400);
+    text-decoration: none;
+    color: $metal;
+
+    &--2 {
+      text-align: right;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 50px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 60px;
+
+    @include on-tablet {
+      gap: 80px;
+    }
+
+    @include on-desktop {
+      gap: 60px;
+    }
+  }
+
+  &__icon {
+    height: 32px;
+    width: 32px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include on-tablet {
+      height: 48px;
+      width: 48px;
+    }
+
+    @include on-desktop {
+      height: 32px;
+      width: 32px;
+    }
+
+    @for $footer-icon from 1 through 3 {
+      &--#{$footer-icon} {
+        background-image: url(../../../public/icons/footer--#{$footer-icon}.svg);
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0;
+    @include textType(64px, auto, $main-font, 700);
+    
+    background-clip: text;
+
+    background-image: linear-gradient(to right, $rich-black 0, $champagne 33%, $metal 99%);
+    color: transparent;
+
+    @include on-tablet {
+      font-size: 80px;
+    }
+
+    @include on-desktop {
+      font-size: 64px;
+    }
+  }
+}

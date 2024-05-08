@@ -1,0 +1,172 @@
+.contact-us {
+  position: relative;
+  display: flex;
+  gap: 44px;
+
+  justify-content: center;
+
+  @include underscore($rich-black);
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+
+    @include on-mobile {
+      @include cancelPadding;
+    }
+
+    @include on-tablet {
+      gap: 50px;
+    }
+
+    @include on-desktop {
+      max-width: 700px;
+    }
+  }
+
+  &__text {
+    padding-block: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 138px;
+    background-color: $champagne;
+
+    @include on-tablet {
+      border-radius: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @include textType(48px, 60px, $main-font, 700);
+    color: $rich-black;
+    text-align: center;
+  }
+
+  &__form {
+    width: 100vw;
+    padding-block: 160px 35px;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 115px;
+    background-color: $charcoal;
+
+    @include on-tablet {
+      width: calc(100vw - (34px * 2));
+      border-radius: 15px;
+    }
+
+    @include on-big-tablet {
+      width: 50vw;
+    }
+  }
+
+  &__input {
+    padding: 0 0 20px 20px;
+
+    height: 32px;
+    width: calc(100% - (20px * 2));
+
+    background: transparent;
+    transform-origin: left;
+
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, $rich-black 0%, $champagne 10%) 1;
+
+    outline: none;
+    
+    @include on-tablet {
+      max-width: 700px;
+    }
+
+    &--note {
+      resize: none;
+    }
+
+    &::placeholder, & {
+      @include textType(20px, 28px, $main-font, 400);
+      color: $champagne;
+    }
+
+    &::placeholder {
+      opacity: .7;
+    }
+  }
+
+  &__button {
+    height: 86px;
+    width: calc(100% - (20px * 2));
+
+    border-radius: 17px;
+    background-color: $champagne;
+
+    @include textType(32px, auto, $main-font, 700);
+    color: $rich-black;
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $rich-black;
+      color: $champagne;
+      border-color: $khaki;
+    }
+
+    @include on-tablet {
+      max-width: 700px;
+    }
+
+    @include on-big-tablet {
+      max-width: 560px;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include on-big-tablet {
+      display: block;
+      
+      height: 63vw;
+      width: 40vw;
+      border-radius: 15px;
+  
+      background-image: url(../../../public/images/contact-us.jpg);
+      @include imageDefault;
+    }
+
+    @include on-desktop {
+      //approximate
+      max-height: 910px;
+    }
+  }
+}
+
+@keyframes rollInput {
+  to { transform: scaleX(100%); }
+}
+
+@supports (animation-timeline: view()) {
+  .contact-us {
+    &__input {
+      transform: scaleX(.2);
+
+      animation: rollInput linear forwards;
+      animation-timeline: view();
+      animation-range-end: 70vw;
+
+      @include on-tablet {
+        animation-range-end: 20vw;
+      }
+    }
+  }
+}

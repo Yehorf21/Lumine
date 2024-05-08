@@ -1,0 +1,179 @@
+.reviews {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+
+  @include underscore($rich-black);
+
+  @include on-tablet {
+    gap: 350px;
+  }
+
+  &__title {
+    margin: 0;
+    
+    @include textType(48px, auto, $main-font, 700);
+    color: $metal;
+    text-align: center;
+
+    @include on-tablet {
+      font-size: 80px;
+    }
+
+    @include on-desktop {
+      font-size: 100px;
+    }
+  }
+
+  &__reviews {
+    --columns: 1;
+    --max-width: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), minmax(390px, var(--max-width)));
+    justify-content: center;
+    justify-items: center;
+
+    row-gap: 250px;
+    column-gap: 100px;
+    
+    @include on-tablet {
+      // tinkered with the max-width for better look on different devices
+      --max-width: 600px;
+    }
+    
+    @include on-big-tablet {
+      --max-width: 500px;
+      --columns: 2;
+
+      justify-content: space-between;
+    }
+  }
+}
+
+.review {
+  padding: 0 25px 30px;
+
+  position: relative;
+  display: flex;
+  align-items: end;
+
+  width: 100%;
+  height: 390px;
+
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+
+  @include on-mobile {
+    max-width: 400px;
+  }
+
+  @include on-tablet {
+    padding: 0 25px 50px;
+    height: 500px;
+  }
+
+  @include on-big-tablet {
+    height: 450px;
+  }
+
+  &--1 {
+    background-color: $rich-black;
+    color: $champagne;
+  }
+
+  &--2 {
+    background-color: $khaki;
+    color: $rich-black;
+  }
+
+  &--3 {
+    background-color: $champagne;
+    color: $rich-black;
+  }
+
+  &--4 {
+    background-color: $charcoal;
+    color: $champagne;
+  }
+
+  @for $review from 1 through 4 {
+    &--#{$review}::after {
+      content: "";
+
+      background-image: url(../../../public/images/reviewer--#{$review}.jpg);
+      @include imageDefault;
+      border-radius: 30px;
+
+      position: absolute;
+      left: 0;
+      bottom: 170px;
+
+      height: 100%;
+      width: 100%;
+
+      @include on-tablet {
+        bottom: 210px;
+      }
+
+      @include on-big-tablet {
+        bottom: 225px;
+      }
+
+      @include on-desktop {
+        bottom: 200px;
+      }
+    }
+  }
+
+  &__comment {
+    margin: 0;
+
+    @include textType(16px, 24px, $secondary-font, 300);
+    text-align: bottom;
+
+    @include on-tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+@keyframes slideUpMobile {
+  to { transform: translateY(-120px); }
+}
+
+@keyframes slideUpTablet {
+  to { transform: translateY(-160px); }
+}
+
+@keyframes slideUpBigScreens {
+  to { transform: translateY(-190px); }
+}
+
+@supports (animation-timeline: view()) {
+  .review {
+    &::after {
+      bottom: 35px;
+
+      animation: slideUpMobile linear forwards;
+      animation-timeline: view();
+      animation-range: 30vw 100vw;
+
+      @include on-tablet {
+        animation-name: slideUpTablet;
+      }
+      
+      @include on-big-tablet {
+        animation-range-start: unset;
+        animation-name: slideUpBigScreens;
+      }
+
+      @include on-desktop {
+        animation-range-end: 50vw;
+      }
+    }
+  }
+}

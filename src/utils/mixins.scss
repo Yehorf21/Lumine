@@ -1,0 +1,89 @@
+@mixin textType($font-size, $line-height, $font-family, $thickness) {
+  font-family: $font-family;
+
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $thickness;
+}
+
+@mixin imageDefault {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center center;
+}
+
+@mixin addPadding {
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 34px;
+  }
+
+  @include on-desktop {
+    padding-inline: 120px;
+  }
+}
+
+@mixin cancelPadding {
+  margin-inline: -20px;
+
+  @include on-tablet {
+    margin-inline: -34px;
+  }
+
+  @include on-desktop {
+    margin-inline: -120px;
+  }
+}
+
+@mixin underscore($bg-color){
+  &::after {
+    content: "";
+
+    max-width: 1440px;
+
+    position: absolute;
+    bottom: -65px;
+    left: -10px;
+
+    width: calc(100vw - 20px);
+    height: 3px;
+
+    background-color: $bg-color;
+
+    @include on-tablet {
+      bottom: -70px;
+      left: -24px;
+    }
+
+    @include on-desktop {
+      bottom: -100px;
+      left: -110px;
+    }
+  }
+}
+
+@mixin on-mobile {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin on-big-tablet {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

@@ -1,0 +1,160 @@
+.header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+
+  @include underscore($champagne);
+
+  &__card {
+    // to make it so that the image doesn't cause horizontal scrolling
+    @include cancelPadding;
+    @include addPadding;
+
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+
+    @include on-tablet {
+      margin-top: 20px;
+    }
+
+    @include on-big-tablet {
+      gap: 50px;
+    }
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 100px;
+
+      align-items: center
+    }
+  }
+
+  &__image {
+    @include cancelPadding;
+    max-height: 880px;
+
+    align-self: center;
+    width: 105vw;
+    height: 80vw;
+
+    border-radius: 20%;
+
+    background-image: url(../../../public/images/header.jpg);
+    @include imageDefault;
+
+    @include on-desktop {
+      // to position it like on the design
+      position: relative;
+      left: -7vw;
+
+      height: 50vw;
+      width: 70vw;
+    }
+
+    @media (min-width: 1440px) {
+      left: -150px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    // for better look on bigger devices
+    @include on-tablet {
+      max-width: 720px;
+    }
+
+    @include on-desktop {
+      max-width: 570px;
+    }
+  }
+
+  &__title {
+    margin-block: 20px 0;
+
+    @include textType(48px, auto, $main-font, 700);
+    color: $rich-black;
+
+    @include on-tablet {
+      font-size: 74px;
+      max-width: 530px;
+    }
+
+    @include on-big-tablet {
+      font-size: 84px;
+    }
+
+    @include on-tablet {
+      font-size: 64px;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+
+    @include textType(16px, 20px, $secondary-font, 300);
+    color: $metal;
+
+    @include on-tablet {
+      @include textType(24px, 32px, $secondary-font, 300);
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+
+    height: 95px;
+    width: calc(100vw - (20px * 2));
+    max-width: 400px;
+
+    background-color: $metal;
+    border-radius: 17px;
+
+    @include textType(24px, auto, $main-font, 700);
+    color: $champagne;
+    transition: all .3s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: $champagne;
+      color: $rich-black;
+      border-color: $rich-black;
+    }
+
+    @include on-tablet {
+      margin-top: 70px;
+      height: 120px;
+      width: calc(100vw - (34px * 2));
+
+      max-width: 700px;
+    }
+
+    @include on-desktop {
+      width: 400px;
+      height: 95px;
+    }
+  }
+}
+
+@keyframes slideOut {
+  to { transform: translateX(-50%); }
+}
+
+// since animation-timeline isn't supported in Safari and some of the other browsers, this counter measure is necessary
+@supports (animation-timeline: view()) {
+  .header {
+    &__image {
+      @include on-desktop {
+        animation: slideOut linear forwards;
+        animation-timeline: view();
+        animation-range-start: 50vw;
+      }
+    }
+  }
+}
