@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Lumine/static/css/main.887e3b76.css",
-    "main.js": "/Lumine/static/js/main.74f022b4.js",
+    "main.css": "/Lumine/static/css/main.1fb161cb.css",
+    "main.js": "/Lumine/static/js/main.162bd4a5.js",
     "static/media/header.jpg": "/Lumine/static/media/header.38e1ae6d4e12e9390c68.jpg",
     "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.cd428c2fd7ff5603356d.jpg",
     "static/media/product.jpg": "/Lumine/static/media/product.a9553a7d1b7ef8246bcc.jpg",
@@ -19,11 +19,11 @@
     "static/media/footer--1.svg": "/Lumine/static/media/footer--1.a31482be333dba5ccb37.svg",
     "static/media/close.svg": "/Lumine/static/media/close.fb665a26d9165e02bfbb.svg",
     "static/media/menu.svg": "/Lumine/static/media/menu.3ebf5b12ad365afa0ef6.svg",
-    "main.887e3b76.css.map": "/Lumine/static/css/main.887e3b76.css.map",
-    "main.74f022b4.js.map": "/Lumine/static/js/main.74f022b4.js.map"
+    "main.1fb161cb.css.map": "/Lumine/static/css/main.1fb161cb.css.map",
+    "main.162bd4a5.js.map": "/Lumine/static/js/main.162bd4a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.887e3b76.css",
-    "static/js/main.74f022b4.js"
+    "static/css/main.1fb161cb.css",
+    "static/js/main.162bd4a5.js"
   ]
 }
