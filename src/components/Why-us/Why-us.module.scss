@@ -118,6 +118,8 @@
 
     @include on-desktop {
       display: block;
+
+      transform: scale(0.7);
     }
 
     height: 35vw;
@@ -133,22 +135,6 @@
     &--2 {
       background-image: url(../../../public/images/why-us--second.jpg);
       margin-left: 120px;
-    }
-  }
-}
-
-@keyframes scaleUp {
-  to { transform: scale(1); }
-}
-
-@supports (animation-timeline: view()) {
-  .why-us-card {
-    &__image {
-      transform: scale(0.7);
-  
-      animation: scaleUp linear forwards;
-      animation-timeline: view();
-      animation-range-end: 50vw;
     }
   }
 }

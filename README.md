@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is the first landing page for which I made the design myself. It was quite an interesting experience, and I'm glad to share it with whoever will check it out on my portfolio.
+This is the first landing page for which I made the design myself. It was quite an interesting experience, and I'm glad to share it with whoever will check it out on my portfolio. Thanks to this project, I got familiar with GSAP and its wonderful animations.
 
 - Design
 
@@ -22,7 +22,7 @@ React
 SCSS
 Typescript
 Figma (for design)
-
+GSAP(for animations)
 
 - Installation
 

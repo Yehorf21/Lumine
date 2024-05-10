@@ -22,6 +22,9 @@
     @include imageDefault;
     border-radius: 50%;
 
+    opacity: .3;
+    transform: translateY(50%);
+
     align-self: center;
 
     @include on-tablet {
@@ -127,23 +130,6 @@
       line-height: 32px;
 
       max-width: 750px;
-    }
-  }
-}
-
-@keyframes showUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@supports (animation-timeline: view()) {
-  .product {
-    &__image {
-      opacity: .3;
-      transform: translateY(50%);
-  
-      animation: showUp linear forwards;
-      animation-timeline: view();
-      animation-range-end: 50vw;
     }
   }
 }

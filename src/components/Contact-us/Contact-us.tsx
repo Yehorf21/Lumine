@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { inputFields } from '../../helpers/context';
 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP,ScrollTrigger);
+
 const initialInputBody = {
   name: '',
   email: '',
@@ -11,6 +18,24 @@ type InputField = typeof inputFields[number];
 
 export const ContactUs = () => {
   const [inputBody, setInputBody] = useState(initialInputBody);
+
+  useGSAP(() => {
+    const inputs = gsap.utils.toArray<Element>('.contact-us__input');
+
+    inputs.forEach(input => {
+      gsap.to(input, {
+        scaleX: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: input,
+          scrub: 1,
+          start: 'top bottom',
+          end: 'top 70%',
+        }
+      });
+    });
+
+  }, []);
 
   const handleInput = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -56,7 +81,7 @@ export const ContactUs = () => {
           <button className="contact-us__button">SUBMIT</button>
         </form>
       </div>
-
+      
       <div className="contact-us__image" />
     </section>
   );

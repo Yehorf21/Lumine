@@ -5,6 +5,12 @@
 
   justify-content: center;
 
+  // had to specify a fixed height to position the image correctly
+
+  @include on-big-tablet {
+    height: 910px;
+  }
+
   @include underscore($rich-black);
 
   &__form-group {
@@ -83,6 +89,7 @@
     border-image: linear-gradient(to right, $rich-black 0%, $champagne 10%) 1;
 
     outline: none;
+    transform: scaleX(.2);
     
     @include on-tablet {
       max-width: 700px;
@@ -136,37 +143,13 @@
     @include on-big-tablet {
       display: block;
       
-      height: 63vw;
-      width: 40vw;
       border-radius: 15px;
+    
+      height: 100%;
+      width: 100%;
   
       background-image: url(../../../public/images/contact-us.jpg);
       @include imageDefault;
-    }
-
-    @include on-desktop {
-      //approximate
-      max-height: 910px;
-    }
-  }
-}
-
-@keyframes rollInput {
-  to { transform: scaleX(100%); }
-}
-
-@supports (animation-timeline: view()) {
-  .contact-us {
-    &__input {
-      transform: scaleX(.2);
-
-      animation: rollInput linear forwards;
-      animation-timeline: view();
-      animation-range-end: 70vw;
-
-      @include on-tablet {
-        animation-range-end: 20vw;
-      }
     }
   }
 }

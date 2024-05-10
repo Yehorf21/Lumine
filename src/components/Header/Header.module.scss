@@ -141,20 +141,3 @@
     }
   }
 }
-
-@keyframes slideOut {
-  to { transform: translateX(-50%); }
-}
-
-// since animation-timeline isn't supported in Safari and some of the other browsers, this counter measure is necessary
-@supports (animation-timeline: view()) {
-  .header {
-    &__image {
-      @include on-desktop {
-        animation: slideOut linear forwards;
-        animation-timeline: view();
-        animation-range-start: 50vw;
-      }
-    }
-  }
-}

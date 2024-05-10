@@ -99,31 +99,19 @@
     color: $champagne;
   }
 
-  @for $review from 1 through 4 {
-    &--#{$review}::after {
-      content: "";
+  &__image {
+    position: absolute;
+    left: 0;
+    bottom: 35px;
 
-      background-image: url(../../../public/images/reviewer--#{$review}.jpg);
-      @include imageDefault;
-      border-radius: 30px;
+    height: 100%;
+    width: 100%;
 
-      position: absolute;
-      left: 0;
-      bottom: 170px;
-
-      height: 100%;
-      width: 100%;
-
-      @include on-tablet {
-        bottom: 210px;
-      }
-
-      @include on-big-tablet {
-        bottom: 225px;
-      }
-
-      @include on-desktop {
-        bottom: 200px;
+    @for $review-img from 1 through 4 {
+      &--#{$review-img} {
+        background-image: url(../../../public/images/reviewer--#{$review-img}.jpg);
+        @include imageDefault;
+        border-radius: 30px;
       }
     }
   }
@@ -137,43 +125,6 @@
     @include on-tablet {
       font-size: 24px;
       line-height: 32px;
-    }
-  }
-}
-
-@keyframes slideUpMobile {
-  to { transform: translateY(-120px); }
-}
-
-@keyframes slideUpTablet {
-  to { transform: translateY(-160px); }
-}
-
-@keyframes slideUpBigScreens {
-  to { transform: translateY(-190px); }
-}
-
-@supports (animation-timeline: view()) {
-  .review {
-    &::after {
-      bottom: 35px;
-
-      animation: slideUpMobile linear forwards;
-      animation-timeline: view();
-      animation-range: 30vw 100vw;
-
-      @include on-tablet {
-        animation-name: slideUpTablet;
-      }
-      
-      @include on-big-tablet {
-        animation-range-start: unset;
-        animation-name: slideUpBigScreens;
-      }
-
-      @include on-desktop {
-        animation-range-end: 50vw;
-      }
     }
   }
 }
