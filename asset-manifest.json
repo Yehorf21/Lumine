@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Lumine/static/css/main.689a1403.css",
+    "main.css": "/Lumine/static/css/main.11d449e0.css",
     "main.js": "/Lumine/static/js/main.162bd4a5.js",
     "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.76d425149ec7d8c73949.jpg",
     "static/media/header.jpg": "/Lumine/static/media/header.cb951ba8226cb88715e7.jpg",
@@ -19,11 +19,11 @@
     "static/media/footer--1.svg": "/Lumine/static/media/footer--1.a31482be333dba5ccb37.svg",
     "static/media/close.svg": "/Lumine/static/media/close.fb665a26d9165e02bfbb.svg",
     "static/media/menu.svg": "/Lumine/static/media/menu.3ebf5b12ad365afa0ef6.svg",
-    "main.689a1403.css.map": "/Lumine/static/css/main.689a1403.css.map",
+    "main.11d449e0.css.map": "/Lumine/static/css/main.11d449e0.css.map",
     "main.162bd4a5.js.map": "/Lumine/static/js/main.162bd4a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.689a1403.css",
+    "static/css/main.11d449e0.css",
     "static/js/main.162bd4a5.js"
   ]
 }
