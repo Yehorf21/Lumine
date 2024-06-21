@@ -27,7 +27,7 @@ body {
   @include addPadding;
 }
 
-section {
+header > section, main > section {
   margin-bottom: 120px;
 
   @include on-tablet {
