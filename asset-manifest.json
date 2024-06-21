@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Lumine/static/css/main.1fb161cb.css",
+    "main.css": "/Lumine/static/css/main.689a1403.css",
     "main.js": "/Lumine/static/js/main.162bd4a5.js",
-    "static/media/header.jpg": "/Lumine/static/media/header.38e1ae6d4e12e9390c68.jpg",
-    "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.cd428c2fd7ff5603356d.jpg",
-    "static/media/product.jpg": "/Lumine/static/media/product.a9553a7d1b7ef8246bcc.jpg",
-    "static/media/why-us--first.jpg": "/Lumine/static/media/why-us--first.fabe5f61796a58142471.jpg",
-    "static/media/reviewer--4.jpg": "/Lumine/static/media/reviewer--4.cced71b577d35c355602.jpg",
-    "static/media/menu.jpg": "/Lumine/static/media/menu.be26545da852879dbaa8.jpg",
-    "static/media/reviewer--3.jpg": "/Lumine/static/media/reviewer--3.6c15f47d3bdc385b418a.jpg",
-    "static/media/reviewer--2.jpg": "/Lumine/static/media/reviewer--2.cb5cc11fe5bd10306568.jpg",
-    "static/media/why-us--second.jpg": "/Lumine/static/media/why-us--second.349e61fd32ff5e7ed4cb.jpg",
-    "static/media/reviewer--1.jpg": "/Lumine/static/media/reviewer--1.e25af476bc65b0ca7544.jpg",
+    "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.76d425149ec7d8c73949.jpg",
+    "static/media/header.jpg": "/Lumine/static/media/header.cb951ba8226cb88715e7.jpg",
+    "static/media/why-us--first.jpg": "/Lumine/static/media/why-us--first.ab4c2aefba01aab1273c.jpg",
+    "static/media/reviewer--4.jpg": "/Lumine/static/media/reviewer--4.f53f5cd78fba9118b1ba.jpg",
+    "static/media/reviewer--3.jpg": "/Lumine/static/media/reviewer--3.6e469050ae02ad14f3e8.jpg",
+    "static/media/reviewer--2.jpg": "/Lumine/static/media/reviewer--2.d21db058377da83b32ba.jpg",
+    "static/media/product.jpg": "/Lumine/static/media/product.39c6d9c2de9d18966c73.jpg",
+    "static/media/menu.jpg": "/Lumine/static/media/menu.3d824e9ece75790a7647.jpg",
+    "static/media/why-us--second.jpg": "/Lumine/static/media/why-us--second.c018c947817444c26cc7.jpg",
+    "static/media/reviewer--1.jpg": "/Lumine/static/media/reviewer--1.916e468c7cd6d8d45e3d.jpg",
     "static/media/logo.png": "/Lumine/static/media/logo.7f9f8a60b846d9026f69.png",
     "static/media/footer--3.svg": "/Lumine/static/media/footer--3.9ad85592430e0cd7d3e2.svg",
     "static/media/footer--2.svg": "/Lumine/static/media/footer--2.3b977b295a564396af8a.svg",
@@ -19,11 +19,11 @@
     "static/media/footer--1.svg": "/Lumine/static/media/footer--1.a31482be333dba5ccb37.svg",
     "static/media/close.svg": "/Lumine/static/media/close.fb665a26d9165e02bfbb.svg",
     "static/media/menu.svg": "/Lumine/static/media/menu.3ebf5b12ad365afa0ef6.svg",
-    "main.1fb161cb.css.map": "/Lumine/static/css/main.1fb161cb.css.map",
+    "main.689a1403.css.map": "/Lumine/static/css/main.689a1403.css.map",
     "main.162bd4a5.js.map": "/Lumine/static/js/main.162bd4a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fb161cb.css",
+    "static/css/main.689a1403.css",
     "static/js/main.162bd4a5.js"
   ]
 }
