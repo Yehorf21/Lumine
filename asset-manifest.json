@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Lumine/static/css/main.8988683d.css",
+    "main.css": "/Lumine/static/css/main.88246b7f.css",
     "main.js": "/Lumine/static/js/main.162bd4a5.js",
-    "static/media/why-us--first.jpg": "/Lumine/static/media/why-us--first.b436023b67003e812580.jpg",
-    "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.df5c0a006ba1f84199c5.jpg",
-    "static/media/reviewer--4.jpg": "/Lumine/static/media/reviewer--4.643a4de72a5d9130fcba.jpg",
-    "static/media/reviewer--3.jpg": "/Lumine/static/media/reviewer--3.3dc6a5d837f27a4fbd7a.jpg",
-    "static/media/header.jpg": "/Lumine/static/media/header.2a334f0ce2f3a6f2e538.jpg",
-    "static/media/reviewer--2.jpg": "/Lumine/static/media/reviewer--2.53072e29743d3d8004c9.jpg",
-    "static/media/why-us--second.jpg": "/Lumine/static/media/why-us--second.20cb66b69b48e4b90b8b.jpg",
-    "static/media/menu.jpg": "/Lumine/static/media/menu.7379fd4046ca9f1a3f06.jpg",
-    "static/media/reviewer--1.jpg": "/Lumine/static/media/reviewer--1.9f1b329c5f3049492b91.jpg",
-    "static/media/product.jpg": "/Lumine/static/media/product.f2aca5fe5775102359d5.jpg",
+    "static/media/reviewer--4.jpg": "/Lumine/static/media/reviewer--4.403ae3641bb2e338c998.jpg",
+    "static/media/why-us--first.jpg": "/Lumine/static/media/why-us--first.65d4d41abc5358d4fdcd.jpg",
+    "static/media/contact-us.jpg": "/Lumine/static/media/contact-us.48b259e079a6585bbccf.jpg",
+    "static/media/reviewer--3.jpg": "/Lumine/static/media/reviewer--3.6397ee5c59a5ebf7ccb2.jpg",
+    "static/media/reviewer--2.jpg": "/Lumine/static/media/reviewer--2.e129f5c79feb3e34ebb0.jpg",
+    "static/media/header.jpg": "/Lumine/static/media/header.9d6506d0a739a1dfd814.jpg",
+    "static/media/why-us--second.jpg": "/Lumine/static/media/why-us--second.1546c48a9b004f97108a.jpg",
+    "static/media/reviewer--1.jpg": "/Lumine/static/media/reviewer--1.f588ed002e228d8efb3e.jpg",
+    "static/media/menu.jpg": "/Lumine/static/media/menu.8eaf40dbe8cc9dded53f.jpg",
     "static/media/logo.png": "/Lumine/static/media/logo.7f9f8a60b846d9026f69.png",
+    "static/media/product.jpg": "/Lumine/static/media/product.4e9b6895f4dfe36cb3f4.jpg",
     "static/media/footer--3.svg": "/Lumine/static/media/footer--3.9ad85592430e0cd7d3e2.svg",
     "static/media/footer--2.svg": "/Lumine/static/media/footer--2.3b977b295a564396af8a.svg",
     "index.html": "/Lumine/index.html",
     "static/media/footer--1.svg": "/Lumine/static/media/footer--1.a31482be333dba5ccb37.svg",
     "static/media/close.svg": "/Lumine/static/media/close.fb665a26d9165e02bfbb.svg",
     "static/media/menu.svg": "/Lumine/static/media/menu.3ebf5b12ad365afa0ef6.svg",
-    "main.8988683d.css.map": "/Lumine/static/css/main.8988683d.css.map",
+    "main.88246b7f.css.map": "/Lumine/static/css/main.88246b7f.css.map",
     "main.162bd4a5.js.map": "/Lumine/static/js/main.162bd4a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.8988683d.css",
+    "static/css/main.88246b7f.css",
     "static/js/main.162bd4a5.js"
   ]
 }
